@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// Page component
+import HomePage from "./pages/HomePage";
+import Bookmarked from "./pages/TvSeries";
+import Movies from "./pages/Movies";
+import TvSeries from './pages/TvSeries';
+
+// Styled Components
+import { ThemeProvider } from 'styled-components';
+import { themeLight } from './styles/Themes';
+import './styles/stylesReset.css'
+import { GlobalStyle } from './styles/GlobalStyles';
 
 function App() {
+
+  const [theme, setTheme] = useState(themeLight)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/movies" element={<Movies />}/>
+          <Route path="/tvseries" element={<TvSeries />}/>
+          <Route path="/bookmarked" element={<Bookmarked />}/>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
