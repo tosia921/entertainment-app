@@ -7,7 +7,8 @@
   
   /* Remove default padding */
   ul,
-  ol {
+  ol,
+  menu {
     padding: 0;
   }
   
@@ -25,7 +26,8 @@
   figcaption,
   blockquote,
   dl,
-  dd {
+  dd, 
+  menu {
     margin: 0;
   }
   
