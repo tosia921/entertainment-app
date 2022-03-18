@@ -4,7 +4,7 @@ import PageWrapper from '../Components/PageWrapper'
 
 const Bookmarked = () => {
   return (
-    <PageWrapper>Bookmarked</PageWrapper>
+    <PageWrapper>TV Series</PageWrapper>
   )
 }
 

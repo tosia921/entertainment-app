@@ -2,7 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // Page component
 import HomePage from "./pages/HomePage";
-import Bookmarked from "./pages/TvSeries";
+import Bookmarked from "./pages/Bookmarked";
 import Movies from "./pages/Movies";
 import TvSeries from './pages/TvSeries';
 

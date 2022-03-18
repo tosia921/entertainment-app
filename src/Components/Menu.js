@@ -16,30 +16,27 @@ import UserIcon from '../assets/image-avatar.png'
 const Menu = () => {
   return (
     <StyledMenu>
-        <StyledLogo />
+        <div>
+          <StyledLogo />
+        </div>
         <menu>
             <li>
-              <NavLink to="/" 
-                    style={({ isActive }) => {
-                          return {
-                            fill: isActive ? "white" : "",
-                          };
-              }}>
-                <StyledMenuHome/>
+              <NavLink to="/" className={({isActive}) => isActive ? 'page-active' : undefined}>
+                <StyledMenuHome />
               </NavLink>
             </li>
             <li>
-              <NavLink to="/Movies">
+              <NavLink to="/Movies" className={({isActive}) => isActive ? 'page-active' : undefined}>
                <StyledMenuMovies/>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/tvseries">
+              <NavLink to="/tvseries" className={({isActive}) => isActive ? 'page-active' : undefined}>
                 <StyledMenuTVSeries/>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/bookmarked">
+              <NavLink to="/bookmarked" className={({isActive}) => isActive ? 'page-active' : undefined}>
                 <StyledMenuBookmark/>
               </NavLink>
             </li>
@@ -159,6 +156,13 @@ const StyledMenu = styled.nav`
           @media ${device.lg}{
             margin-right: 0;
             margin-bottom: 40px;
+          }
+        }
+        .page-active {
+          svg {
+            path {
+              fill: white;
+            }
           }
         }
       }

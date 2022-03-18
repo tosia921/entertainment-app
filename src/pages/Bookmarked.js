@@ -2,10 +2,10 @@ import React from 'react'
 
 import PageWrapper from '../Components/PageWrapper'
 
-const HomePage = () => {
+const Bookmarked = () => {
   return (
-    <PageWrapper>HomePage</PageWrapper>
+    <PageWrapper>Bookmarked</PageWrapper>
   )
 }
 
-export default HomePage
+export default Bookmarked
