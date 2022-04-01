@@ -1,5 +1,12 @@
 import { useState } from "react";
+
+// React Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Redux
+import { store } from './redux/store'
+import { Provider } from 'react-redux'
+
 // Page component
 import HomePage from "./pages/HomePage";
 import Bookmarked from "./pages/Bookmarked";
@@ -17,6 +24,7 @@ function App() {
   const [theme, setTheme] = useState(themeLight)
 
   return (
+    <Provider store={store}>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <BrowserRouter>
@@ -28,6 +36,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
+    </Provider>
   );
 }
 
