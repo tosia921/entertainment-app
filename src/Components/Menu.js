@@ -114,7 +114,7 @@ const StyledMenu = styled.nav`
       height: 95vh;
       border-radius: 20px;
       flex-direction: column;
-      padding: 35px 0px;
+      padding: 35px 28px;
       justify-content: start;
       min-height: 500px;
     }

@@ -33,4 +33,14 @@ const Wrapper = styled.div`
     @media ${device.lg}{
       flex-direction: row;
     }
+
+    main {
+      width: 100%;
+      padding-top: 16px;
+
+      @media ${device.lg}{
+        padding-left: 16px;
+        padding-top: 0;
+      }
+    }
 `;
