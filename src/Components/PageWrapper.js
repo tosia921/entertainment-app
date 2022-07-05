@@ -20,7 +20,7 @@ export default PageWrapper
 
 const Wrapper = styled.div`
     padding: 0 16px;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     overflow: hidden;
     background-color: ${p => p.theme.backgroundColorDark};
